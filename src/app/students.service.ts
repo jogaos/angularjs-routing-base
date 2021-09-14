@@ -6,24 +6,31 @@ import { Student } from "./data/student"
 })
 export class StudentsService {
 
-  private students:Student[];
+  private students: Student[];
 
-  constructor() { 
+  constructor() {
     this.students = [];
   }
 
-  getStudents(){
+  getStudents() {
     return this.students;
   }
 
-  setNewStudent(newStudent:Student): boolean{
+  setNewStudent(newStudent: Student): boolean {
     let studentsResult = this.students.filter(x => x.identifier == newStudent.identifier);
-    let studentExist =  studentsResult.length == 0;
+    let studentExist = studentsResult.length == 0;
 
-    if(studentExist){
+    if (studentExist) {
       this.students.push(newStudent);
     }
 
+    return studentExist;
+  }
+
+  searchStudent(studentIdentifier: String): boolean {
+    let studentsResult = this.students.filter(x => x.identifier == studentIdentifier);
+    let studentExist = studentsResult.length == 1;
+    
     return studentExist;
   }
 }
