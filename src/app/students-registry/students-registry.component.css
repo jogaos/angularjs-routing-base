@@ -1,0 +1,22 @@
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+}
+
+.lead {
+    font-size: 21px;
+    display: inline-block !important;
+}
+.jumbotron p {
+    margin: 0 0 10px;
+    display: inline-block;
+}
+
+.jumbotron{
+    background: ligthgray;
+}

@@ -1,0 +1,13 @@
+<div class="jumbotron">
+    <h2>
+        Listado estudiantes
+    </h2>
+    <div *ngIf="! studentList.length">No hay estudiantes por el momento</div>
+    <div>
+        <article *ngFor="let item of studentList">
+            <span>{{item.identifier}}</span>
+            <span>{{item.name}}</span>
+            <span>{{item.lastName}}</span>
+        </article>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="jumbotron">
+    <h2>Creación de estudiantes</h2>
+
+    <div>
+      <p class="lead">
+        <span>Carnet:</span>
+        <input type="text" [(ngModel)]="student.identifier">
+      </p>
+    </div>
+    <div>
+      <p class="lead">
+        <span>Nombre:</span>
+        <input type="text" [(ngModel)]="student.name">
+      </p>
+    </div>
+    <div>
+      <p class="lead">
+        <span>Apellido:</span>
+        <input type="text" [(ngModel)]="student.lastName">
+      </p>
+    </div>
+    <div>
+        <p class="lead">
+          <span>Estudiantes registrados: {{studentsSize}}</span>
+        </p>
+      </div>
+    <div>
+      <button type="button" class="btn btn-primary" (click)="saveNewStudent()">Guardar</button>
+    </div>
+  </div>
