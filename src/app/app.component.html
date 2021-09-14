@@ -2,15 +2,12 @@
   <div class="row">
     <div class="col col-sm-10 col-md-8">
       <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Registro</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Listado</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Principal</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="studentRegistry">Registro</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/student-list']">Listado</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="studentHome">Principal</a></li>
       </ul>
     </div>
   </div>
 </div>
-<app-students-login></app-students-login>
-<app-students-registry></app-students-registry>
-<app-students-list></app-students-list>
-<app-students-home></app-students-home>
+<router-outlet></router-outlet>

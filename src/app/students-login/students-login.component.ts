@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from './../data/student';
 import { StudentsService } from './../students.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-students-login',
@@ -11,7 +12,7 @@ export class StudentsLoginComponent implements OnInit {
 
   student: Student;
 
-  constructor(private studentsService: StudentsService) {
+  constructor(private studentsService: StudentsService, private router:Router) {
   }
 
   ngOnInit(): void {
@@ -22,7 +23,7 @@ export class StudentsLoginComponent implements OnInit {
     let createdNewStudent:boolean = this.studentsService.searchStudent(this.student.identifier);
 
     if (createdNewStudent) {
-      alert("Estudiante ya registrado.");
+      this.router.navigate(["/student-home",this.student.identifier]);
     } else {
       alert("Estudiante no registrado.");
     }

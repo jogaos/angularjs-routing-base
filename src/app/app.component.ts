@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'service-angularjs';
+  studentRegistry = "/student-registry";
+  studentHome = ["/student-home"];
+
 }

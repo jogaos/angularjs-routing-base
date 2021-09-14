@@ -33,4 +33,10 @@ export class StudentsService {
     
     return studentExist;
   }
+
+  findOneStudent(studentIdentifier: String):Student{
+    let student = this.students.find(x => x.identifier == studentIdentifier);
+    return student;
+  }
+
 }
